@@ -14,33 +14,57 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \documentclass[a0,portrait]{a0poster}
 
-\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
-\columnsep=100pt % This is the amount of white space between the columns in the poster
-\columnseprule=3pt % This is the thickness of the black line between the columns in the poster
+%% % sans-serif config:
 
-\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
 
-\usepackage{times} % Use the times font
-%\usepackage{palatino} % Uncomment to use the Palatino font
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{multicol} % This is so we can have multiple columns of
+                      % text side-by-side
+\columnsep=100pt % This is the amount of white space between the
+                 % columns in the poster
+\columnseprule=3pt % This is the thickness of the black line between
+                   % the columns in the poster
+
+\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames',
+                              % for a full list of all colors
+                              % available see here:
+                              % http://www.latextemplates.com/svgnames-colors
+
+\usepackage{tgheros}
+%\usepackage{eulermath} %additional math
+
+%% \usepackage{times} % Use the times font
+%% \usepackage{palatino} % Uncomment to use the Palatino fon
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Location of the graphics files
 \usepackage{booktabs} % Top and bottom rules for table
-\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
-\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage[font=small,labelfont=bf]{caption} % Required for
+                                              % specifying captions to
+                                              % tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts,
+                                                % symbols and
+                                                % environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
+
+\usepackage{sfmath}
+
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	POSTER HEADER 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 % The header is divided into two boxes:
 % The first is 75% wide and houses the title, subtitle, names, university/organization and contact information
@@ -48,10 +72,10 @@
 % The widths of these boxes can be easily edited to accommodate your content as you see fit
 
 \begin{minipage}[b]{0.75\linewidth}
-\veryHuge \color{NavyBlue} \textbf{Unnecessarily Complicated Research Title} \color{Black}\\ % Title
-\Huge\textit{An Exploration of Complexity}\\[2cm] % Subtitle
-\huge \textbf{John Smith \& James Smith}\\[0.5cm] % Author(s)
-\huge University and Department Name\\[0.4cm] % University/organization
+\veryHuge \textbf{Non-random connectivity comes in pairs} \color{Black}\\ % Title
+\Huge\textit{}\\[2cm] % Subtitle
+\huge \textbf{Felix Z. Hoffmann, Jochen Triesch}\\[0.5cm] % Author(s)
+\huge Frankfurt Institute for Advanced Studies (FIAS), Johann Wolfgang Goethe University, Frankfurt am Main, Germany\\[0.4cm] % University/organization
 \Large \texttt{john@LaTeXTemplates.com} --- 1 (000) 111 1111\\
 \end{minipage}
 %
@@ -61,15 +85,13 @@
 
 \vspace{1cm} % A bit of extra whitespace between the header and poster content
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\color{Navy} % Navy color for the abstract
+%-----------------------------------------------------------------------------
 
 \begin{abstract}
 
@@ -77,11 +99,9 @@ Sed fringilla tempus hendrerit. Vestibulum ante ipsum primis in faucibus orci lu
 
 \end{abstract}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	INTRODUCTION
-%----------------------------------------------------------------------------------------
-
-\color{SaddleBrown} % SaddleBrown color for the introduction
+%-----------------------------------------------------------------------------
 
 \section*{Introduction}
 
@@ -89,11 +109,9 @@ Aliquam non lacus dolor, \textit{a aliquam quam} \cite{Smith:2012qr}. Cum sociis
 
 \textit{Aliquam auctor}, metus id ultrices porta, risus enim cursus sapien, quis iaculis sapien tortor sed odio. Mauris ante orci, euismod vitae tincidunt eu, porta ut neque. Aenean sapien est, viverra vel lacinia nec, venenatis eu nulla. Maecenas ut nunc nibh, et tempus libero. Aenean vitae risus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	OBJECTIVES
-%----------------------------------------------------------------------------------------
-
-\color{DarkSlateGray} % DarkSlateGray color for the rest of the content
+%-----------------------------------------------------------------------------
 
 \section*{Main Objectives}
 
@@ -108,9 +126,9 @@ Aliquam non lacus dolor, \textit{a aliquam quam} \cite{Smith:2012qr}. Cum sociis
 \item Praesent tortor libero, vulputate quis elementum a, iaculis.
 \end{enumerate}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	MATERIALS AND METHODS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \section*{Materials and Methods}
 
@@ -146,9 +164,9 @@ and
 
 Nulla sed arcu arcu. Duis et ante gravida orci venenatis tincidunt. Fusce vitae lacinia metus. Pellentesque habitant morbi. $\mathbf{A}\underline{\xi}=\underline{\beta}$ Vim $\underline{\xi}$ enum nidi $3(P+2)^{2}$ lacina. Id feugain $\mathbf{A}$ nun quis; magno.
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	RESULTS 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \section*{Results}
 
@@ -200,11 +218,9 @@ Vivamus sed nibh ac metus tristique tristique a vitae ante. Sed lobortis mi ut a
 \captionof{figure}{\color{Green} Figure caption}
 \end{center}\vspace{1cm}
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	CONCLUSIONS
-%----------------------------------------------------------------------------------------
-
-\color{SaddleBrown} % SaddleBrown color for the conclusions to make them stand out
+%-----------------------------------------------------------------------------
 
 \section*{Conclusions}
 
@@ -215,33 +231,32 @@ Vivamus sed nibh ac metus tristique tristique a vitae ante. Sed lobortis mi ut a
 \item Nunc at convallis urna. isus ante. Pellentesque condimentum dui. Etiam sagittis purus non tellus tempor volutpat. Donec et dui non massa tristique adipiscing.
 \end{itemize}
 
-\color{DarkSlateGray} % Set the color back to DarkSlateGray for the rest of the content
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	FORTHCOMING RESEARCH
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \section*{Forthcoming Research}
 
 Vivamus molestie, risus tempor vehicula mattis, libero arcu volutpat purus, sed blandit sem nibh eget turpis. Maecenas rutrum dui blandit lorem vulputate gravida. Praesent venenatis mi vel lorem tempor at varius diam sagittis. Nam eu leo id turpis interdum luctus a sed augue. Nam tellus.
 
- %----------------------------------------------------------------------------------------
+ %----------------------------------------------------------------------------
 %	REFERENCES
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \nocite{*} % Print all references regardless of whether they were cited in the poster or not
 \bibliographystyle{plain} % Plain referencing style
 \bibliography{sample} % Use the example bibliography file sample.bib
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \section*{Acknowledgements}
 
 Etiam fermentum, arcu ut gravida fringilla, dolor arcu laoreet justo, ut imperdiet urna arcu a arcu. Donec nec ante a dui tempus consectetur. Cras nisi turpis, dapibus sit amet mattis sed, laoreet.
 
-%----------------------------------------------------------------------------------------
+%-----------------------------------------------------------------------------
 
 \end{multicols}
 \end{document}
