@@ -60,6 +60,10 @@
 \usepackage{sfmath}
 
 
+\usepackage{bibconfig}
+
+
+
 \begin{document}
 
 %-----------------------------------------------------------------------------
@@ -100,7 +104,13 @@ $\quad ^2$International Max Planck Research School for Neural Circuits, Max Plan
 
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
+  \input{sections/abstract}  
+  \input{sections/introduction}
+  
   \input{other}
+
+  
+  \printbibliography  
 
 \end{multicols}
 \end{document}
