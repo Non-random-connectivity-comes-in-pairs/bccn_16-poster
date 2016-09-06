@@ -1,15 +1,16 @@
 
 \section*{Results}
 
-\textit{Define a random network model in which node-to-node connection probabilities themselves follow a random distribution; some pairs of neurons have a higher chance to be connected than others.}
+First, define a \underline{random network model} in which node-to-node connection probabilities themselves follow a random distribution; some pairs of neurons have a higher chance to be connected than others.
 
 
 Consider a random network model of $N$ neurons in which a connection from node $i$ to node $j$ exists with probability $P_{ij}$.
 %
 Here, the $P_{ij}$, with $i,j = 1,\dots,N$ and $i \neq j$, are identically distributed random variables in $[0,1]$, yielding a probability of connection for each ordered pair of nodes in the network.
 
+\textbf{\textcolor{gblue}{Example}}: Network in which connection probability is either high or low, depending on whether the target neuron share the same feature (e.g. orientation tuning) or not.
 
-\textit{Next, calculate the overrepresentation of bidirectional connection as we would measure in an experiment.}
+Next, calculate the \underline{overrepresentation of bidirectional connections} as we would measure in an experiment.
 
 The overall connection probability $\mu$, that is the chance to have a connection from a random node $i$ to another node $j$, is
 \begin{align}
@@ -19,9 +20,14 @@ For example, if the $P_{ij}$ have a probability density function $f$ with essent
 \begin{align}
   \mu = \int_0^1 x f(x)\,dx.
 \end{align}
-The probability for random pair of nodes $i$ and $j$ to be connected reciprocally is then
+The probability for a random pair of nodes $i$ and $j$ to be connected reciprocally is then
 \begin{align}
 P_{\mathrm{rec}} = \E(P_{ij} P_{ji}).
 \end{align}
+Finally, the relative occurrence $\varrho$ of these reciprocally connected pairs within the network compares $P_{\mathrm{rec}}$ with the occurrence of bidirectionally connected pairs in an Erd\H{o}s-R\'{e}nyi graph, in which each unidirectional connection is equally likely to occur with probability $\mu$. Formally,
+\begin{align}
+  \varrho = \frac{P_{\mathrm{rec}}}{\mu^2} = \frac{\E\left(P_{ij}P_{ji}\right)}{{\E\left(P_{ij}\right)}^2}.
+\end{align}
 
+If connection probabilities are \underline{symmetric} in pairs
 

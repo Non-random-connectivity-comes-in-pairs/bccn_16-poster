@@ -61,14 +61,25 @@
 \usepackage{sansmath} %additional math
 \sansmath
 
-\newcommand{\E}{\operatorname{\mathbf{E}}}
-\newcommand{\Var}{\operatorname{\mathbf{Var}}}
+\usepackage{mathsetup}
 
 \usepackage{bibconfig}
+
+
+\makeatletter
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{18pt}
+  \setlength\belowdisplayskip{18pt}
+  \setlength\abovedisplayshortskip{16pt}
+  \setlength\belowdisplayshortskip{16pt}
+}
+\makeatother
+
 
 \addtolength{\parskip}{0.5\baselineskip}
 \parindent 0pt
 
+\definecolor{gblue}{RGB}{27,98,183}
 
 \begin{document}
 
@@ -113,7 +124,12 @@ $\quad ^2$International Max Planck Research School for Neural Circuits, Max Plan
   \input{sections/abstract}  
   \input{sections/introduction}
   \input{sections/results}
+
+  \vspace{8cm}
   
+  \input{sections/two_point}
+  \input{sections/gamma_distribution}
+  \input{sections/conclusion}
   %\input{other}
 
   
