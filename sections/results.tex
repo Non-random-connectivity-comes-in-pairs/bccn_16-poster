@@ -1,0 +1,27 @@
+
+\section*{Results}
+
+\textit{Define a random network model in which node-to-node connection probabilities themselves follow a random distribution; some pairs of neurons have a higher chance to be connected than others.}
+
+
+Consider a random network model of $N$ neurons in which a connection from node $i$ to node $j$ exists with probability $P_{ij}$.
+%
+Here, the $P_{ij}$, with $i,j = 1,\dots,N$ and $i \neq j$, are identically distributed random variables in $[0,1]$, yielding a probability of connection for each ordered pair of nodes in the network.
+
+
+\textit{Next, calculate the overrepresentation of bidirectional connection as we would measure in an experiment.}
+
+The overall connection probability $\mu$, that is the chance to have a connection from a random node $i$ to another node $j$, is
+\begin{align}
+\mu = \E(P_{ij}).
+\end{align}
+For example, if the $P_{ij}$ have a probability density function $f$ with essential support in $[0,1]$, we can compute the connection fraction as
+\begin{align}
+  \mu = \int_0^1 x f(x)\,dx.
+\end{align}
+The probability for random pair of nodes $i$ and $j$ to be connected reciprocally is then
+\begin{align}
+P_{\mathrm{rec}} = \E(P_{ij} P_{ji}).
+\end{align}
+
+

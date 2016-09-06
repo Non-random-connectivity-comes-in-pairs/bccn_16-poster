@@ -41,7 +41,7 @@
                               % http://www.latextemplates.com/svgnames-colors
 
 \usepackage{tgheros}
-%\usepackage{eulermath} %additional math
+
 
 %% \usepackage{times} % Use the times font
 %% \usepackage{palatino} % Uncomment to use the Palatino fon
@@ -57,11 +57,17 @@
                                                 % environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
 
-\usepackage{sfmath}
+%\usepackage{sfmath}
+\usepackage{sansmath} %additional math
+\sansmath
 
+\newcommand{\E}{\operatorname{\mathbf{E}}}
+\newcommand{\Var}{\operatorname{\mathbf{Var}}}
 
 \usepackage{bibconfig}
 
+\addtolength{\parskip}{0.5\baselineskip}
+\parindent 0pt
 
 
 \begin{document}
@@ -92,8 +98,8 @@ $\quad ^2$International Max Planck Research School for Neural Circuits, Max Plan
   \centering
   
   \includegraphics[width=10cm]{goethe-logo.pdf}\\
-  \vspace{2cm}
-  \includegraphics[width=15cm]{FIAS-logo.pdf}\\
+  \vspace{2.8cm}
+  \includegraphics[width=12.5cm]{FIAS-logo.pdf}\\
   \vspace{2cm}
   
 \end{minipage}
@@ -106,11 +112,28 @@ $\quad ^2$International Max Planck Research School for Neural Circuits, Max Plan
 
   \input{sections/abstract}  
   \input{sections/introduction}
+  \input{sections/results}
   
-  \input{other}
+  %\input{other}
 
   
   \printbibliography  
 
 \end{multicols}
+
+%% \begin{columns}
+%%   %
+%%   \begin{column}{.5\textwidth}
+%%     \input{sections/abstract}  
+%% \input{sections/introduction}
+
+%%   \end{column}
+%%   %
+%%   \begin{column}{.5\textwidth}
+
+%%       \input{sections/results}
+%%   \end{column}
+%% \end{columns}
+
+
 \end{document}
