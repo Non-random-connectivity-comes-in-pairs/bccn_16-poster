@@ -1,7 +1,7 @@
 
 \section*{Results}
 
-First, define a \underline{random network model} in which node-to-node connection probabilities themselves follow a random distribution; some pairs of neurons have a higher chance to be connected than others.
+Define a \underline{random network model} in which node-to-node connection probabilities themselves follow a random distribution; some pairs of neurons have a higher chance to be connected than others.
 
 
 Consider a random network model of $N$ neurons in which a connection from node $i$ to node $j$ exists with probability $P_{ij}$.
@@ -10,7 +10,9 @@ Here, the $P_{ij}$, with $i,j = 1,\dots,N$ and $i \neq j$, are identically distr
 
 \textbf{\textcolor{gblue}{Example}}: Network in which connection probability is either high or low, depending on whether the target neuron share the same feature (e.g. orientation tuning) or not.
 
-Next, calculate the \underline{overrepresentation of bidirectional connections} as we would measure in an experiment.
+\begin{center}
+   -----------------------------------------------------------------
+\end{center}
 
 The overall connection probability $\mu$, that is the chance to have a connection from a random node $i$ to another node $j$, is
 \begin{align}
@@ -24,7 +26,12 @@ The probability for a random pair of nodes $i$ and $j$ to be connected reciproca
 \begin{align}
 P_{\mathrm{rec}} = \E(P_{ij} P_{ji}).
 \end{align}
-Finally, the relative occurrence $\varrho$ of these reciprocally connected pairs within the network compares $P_{\mathrm{rec}}$ with the occurrence of bidirectionally connected pairs in an Erd\H{o}s-R\'{e}nyi graph, in which each unidirectional connection is equally likely to occur with probability $\mu$. Formally,
+
+\begin{center}
+  ------------------------------------------------------------------
+\end{center}
+
+The relative occurrence $\varrho$ of these reciprocally connected pairs within the network compares $P_{\mathrm{rec}}$ with the occurrence of bidirectionally connected pairs in an Erd\H{o}s-R\'{e}nyi graph, in which each unidirectional connection is equally likely to occur with probability $\mu$. Formally,
 \begin{align}
   \varrho = \frac{P_{\mathrm{rec}}}{\mu^2} = \frac{\E\left(P_{ij}P_{ji}\right)}{{\E\left(P_{ij}\right)}^2}.
 \end{align}
@@ -33,4 +40,16 @@ If connection probabilities are \underline{symmetric in pairs}, $P_{ij} = P_{ji}
 \begin{align}
 \varrho = \frac{\E(P_{ij}^2)}{{\E\left(P_{ij}\right)}^2}.
 \end{align}.
+
+Since $x \mapsto x^2$ is a strictly convex function, \underline{Jensen's inequality} \cite{Jensen1906} yields
+\begin{align}
+\E(P_{ij}^2) \geq \E(P_{ij})^2. \label{eq:jensen}
+\end{align}
+Equality holds in \eqref{eq:jensen} if and only if $P_{ij}$ is a constant. Thus \textit{any} non-degenerate distribution of connection probabilities \textit{necessarily} induces an overrepresentation of bidirectional connections in the network, $\varrho > 1$.
+
+\begin{center}
+  ------------------------------------------------------------------
+\end{center}
+
+\textcolor{gblue}{\textbf{Summary}}: In a network where some pairs are more likely connected than others, the count of expected reciprocally connected pairs is strictly underestimated by the statistics of an Erd\H{o}s-R\'{e}nyi graph with same overall connection probability $\E(P_{ij}) = \mu$.
 
