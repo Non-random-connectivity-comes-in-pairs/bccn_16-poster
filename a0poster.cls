@@ -167,8 +167,8 @@
 \setlength\medskipamount{12pt plus 4pt minus 4pt}
 \setlength\bigskipamount{24pt plus 8pt minus 8pt}
 
-\setlength\abovecaptionskip{25pt}
-\setlength\belowcaptionskip{0pt}
+\setlength\abovecaptionskip{15pt}
+\setlength\belowcaptionskip{-1.5cm}
 \setlength\abovedisplayskip{25pt plus 6pt minus 15 pt}
 \setlength\abovedisplayshortskip{0pt plus 6pt}
 \setlength\belowdisplayshortskip{13pt plus 7pt minus 6pt}
