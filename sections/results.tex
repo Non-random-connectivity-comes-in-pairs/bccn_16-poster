@@ -11,7 +11,7 @@ Here, the $P_{ij}$, with $i,j = 1,\dots,N$ and $i \neq j$, are identically distr
 \textbf{\textcolor{gblue}{Example}}: Network in which connection probability is either high or low, depending on whether the target neuron share the same feature (e.g. orientation tuning) or not.
 
 \begin{center}
-   -----------------------------------------------------------------
+  \rule{19cm}{2pt}
 \end{center}
 
 The overall connection probability $\mu$, that is the chance to have a connection from a random node $i$ to another node $j$, is
@@ -28,7 +28,7 @@ P_{\mathrm{rec}} = \E(P_{ij} P_{ji}).
 \end{align}
 
 \begin{center}
-  ------------------------------------------------------------------
+  \rule{19cm}{2pt}
 \end{center}
 
 The relative occurrence $\varrho$ of these reciprocally connected pairs within the network compares $P_{\mathrm{rec}}$ with the occurrence of bidirectionally connected pairs in an Erd\H{o}s-R\'{e}nyi graph, in which each unidirectional connection is equally likely to occur with probability $\mu$. Formally,
@@ -48,7 +48,7 @@ Since $x \mapsto x^2$ is a strictly convex function, \textbf{Jensen's inequality
 Equality holds in \eqref{eq:jensen} if and only if $P_{ij}$ is a constant. Thus \textit{any} non-degenerate distribution of connection probabilities \textit{necessarily} induces an overrepresentation of bidirectional connections in the network, $\varrho > 1$.
 
 \begin{center}
-  ------------------------------------------------------------------
+  \rule{19cm}{2pt}
 \end{center}
 
 \textcolor{gblue}{\textbf{Summary}}: In a network where some pairs are more likely connected than others, the count of expected reciprocally connected pairs is strictly underestimated by the statistics of an Erd\H{o}s-R\'{e}nyi graph with same overall connection probability $\E(P_{ij}) = \mu$.
